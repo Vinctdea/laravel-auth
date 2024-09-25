@@ -16,9 +16,9 @@
             @foreach ($posts as $post)
                 <tr>
 
-                    <td>{{ $post->id }}d</td>
-                    <td>{{ $post->title }}d</td>
-                    <td>{{ $post->created_at }}</td>
+                    <td>{{ $post->id }}</td>
+                    <td>{{ $post->title }}</td>
+                    <td>{{ $post->created_at->format('d/m/Y') }}</td>
                     <td>
                         <a href="" class="btn btn-dark">dettagli</a>
                         <a href="" class="btn btn-warning">Modifica</a>
