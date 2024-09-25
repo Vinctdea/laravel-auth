@@ -14,7 +14,17 @@ li{
 
 }
 
+.wrapper{
+    height: calc(100vh - 95px);
+
+}
+
 aside{
     width: 200px;
-    height: calc(100vh - 88px);
+    height: 100%;
+}
+
+.content{
+    overflow: auto;
+    width: 100%;
 }

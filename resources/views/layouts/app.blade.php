@@ -19,7 +19,7 @@
 
     @include('admin.partials.header')
 
-    <div class="d-flex">
+    <div class="d-flex wrapper">
 
         @auth
             @include('admin.partials.aside')
