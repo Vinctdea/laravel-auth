@@ -20,7 +20,7 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->created_at->format('d/m/Y') }}</td>
                     <td>
-                        <a href="" class="btn btn-dark">dettagli</a>
+                        <a href="{{ route('admin.posts.show', $post) }}" class="btn btn-dark">dettagli</a>
                         <a href="" class="btn btn-warning">Modifica</a>
                         <a href="" class="btn btn-danger">Cancella</a>
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('conten')
+@section('content')
     <h1>Dettagli post</h1>
     <ul>
         <li>Titolo: {{ $post->title }}</li>
