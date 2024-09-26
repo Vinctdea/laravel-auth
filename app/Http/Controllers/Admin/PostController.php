@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Functions\Helper;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -23,16 +25,13 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(PostRequest $request) {}
 
     /**
      * Display the specified resource.
