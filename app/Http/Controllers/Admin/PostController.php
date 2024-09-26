@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Functions\Helper;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostsRequest;
 
 class PostController extends Controller
 {
@@ -31,14 +31,24 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PostRequest $request) {}
+    public function store(PostsRequest $request)
+    {
+        $data = $request->all();
+        $data['slug'] = Helper::generateSlug($data['title'], Post::class);
+
+        $post = Post::create($data);
+
+        return redirect()->route('admin.posts.show', $post);
+    }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+
+
+    public function show(Post $post)
     {
-        //
+        return view('admin.posts.show', compact('post'));
     }
 
     /**
